@@ -1,0 +1,27 @@
+
+.outerdiv{ width:955px; margin:30px 10px 5px 20px;}
+
+.heading{background:#06C; margin:0 auto;}
+.heading h2{ font:normal 20px/40px "Courier New", Courier, monospace; color:#FFF; margin:0 0 0 10px;}
+
+.box{visibility:visible; overflow:hidden; position:relative; z-index:2; left:0px; width:668px;}
+
+.p7px{padding:7px; width:200px;  overflow:hidden; float:left; border:solid 1px #666; margin:5px 5px;}
+.p7px h3{font:bold 10px/20px Verdana, Geneva, sans-serif; color:#F60; text-align:center;}
+
+.lh0{line-height:0px;}
+
+.mt5px{margin-top:5px;}
+.mt5px h3{font:bold 11px/20px Verdana, Geneva, sans-serif; color:#F60;}
+.mt5px h3 a{color:#930;}
+
+.p5px{padding:5px;}
+.p5px p{font:normal 12px/14px Verdana, Geneva, sans-serif; color:#666;}
+.readMoreButtonTwo{background:#ff6600; font:normal 15px/30px Arial, Helvetica, sans-serif; color:#FFF; padding:0 5px; text-align:center; display:block; width:120px; margin:0 auto;}
+
+.ma1px{ background:#069; width:80px; height:30px; float:left; margin:0 5px;}
+.ma1px p{ font:normal 12px/30px Arial, Helvetica, sans-serif; color:#FFF; text-align:center;}
+.ma1px p a{color:#FFF; }
+
+
+
