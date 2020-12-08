@@ -419,7 +419,7 @@ document.oncontextmenu=new Function("alert(message);return false")
             <h1>Enquiry Form</h1>
             
             </div><!--arrow_box end-->
-            <form name="sms_form" action="send_sms.php" method="post">
+            <form name="sms_form" method="GET" onSubmit="return fnsubmit()">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
             <td id="myDiv">
@@ -428,27 +428,27 @@ document.oncontextmenu=new Function("alert(message);return false")
             </tr>
             <tr>
             <td>
-            <input type="text" name="cname" value="Name" onfocus="javascript: if(this.value == 'Name'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Name';}" required />
+            <input type="text" id="name" name="cname" value="Name" onfocus="javascript: if(this.value == 'Name'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Name';}" required />
             </td>
             </tr>
             <tr>
             <td>
-            <input type="text" name="email" value="Email" onfocus="javascript: if(this.value == 'Email'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Email';}" required />
+            <input type="text" id="email" name="email" value="Email" onfocus="javascript: if(this.value == 'Email'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Email';}" required />
             </td>
             </tr>
             <tr>
             <td>
-            <input type="text" name="mob" value="Phone" onfocus="javascript: if(this.value == 'Phone'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Phone';}" required />
+            <input type="text" id="phone" name="mob" value="Phone" onfocus="javascript: if(this.value == 'Phone'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Phone';}" required />
             </td>
             </tr>
             <tr>
             <td>
-            <input type="text" name="subject" value="Subject" onfocus="javascript: if(this.value == 'Subject'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Subject';}" required />
+            <input type="text" id="subject" name="subject" value="Subject" onfocus="javascript: if(this.value == 'Subject'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Subject';}" required />
             </td>
             </tr>
             <tr>
             <td>
-            <textarea name="requirements" onFocus="javascript: if(this.value == 'Your Requirements'){ this.value = ''; }" onBlur="javascript: if(this.value==''){this.value='Your Requirements';}" required="required">Your Requirements</textarea>
+            <textarea id="comments" name="requirements" onFocus="javascript: if(this.value == 'Your Requirements'){ this.value = ''; }" onBlur="javascript: if(this.value==''){this.value='Your Requirements';}" required="required">Your Requirements</textarea>
        		
             </td>
             </tr>
