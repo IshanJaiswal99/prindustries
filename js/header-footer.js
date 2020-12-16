@@ -7,7 +7,7 @@ const jsheaderTop =  `
     </tr>
     <tr>
     <td width="15%"><img src="images/email.png" width="32" height="42" alt="login_img" /></td>
-    <td width="55%"><p>prind2016@gmail.com</p><p>mohitjaiswal20007@gmail.com</p></td>
+    <td width="55%"><p>prind2016@gmail.com (Office)</p><p>mohitjaiswal20007@gmail.com</p></td>
     </tr>
     </table>`;
 
@@ -35,6 +35,10 @@ const menujs = `
             <li><a href="other-castings.html">Other Castings</a></li>
             `;
 
+            // <div class="footerTopRightInner">
+            // <img src="images/contact_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
+            // <p>Mohit Jaiswal </p>
+            // </div><!--end of footerTopRightInner-->
 const jsfooter = `<div class="footerTop">
 <div class="footerTopLeft">
     <h2>P. R. Industries</h2>
@@ -43,16 +47,20 @@ const jsfooter = `<div class="footerTop">
 </div><!--end of footerTopLeft-->
 <div class="footerTopRight">
     <div class="footerTopRightInner">
-    <img src="images/contact_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-    <p>Mohit Jaiswal </p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10%"><img src="images/mobile_bg.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" /></td>
+        <td width="75%"><p> +91 8232027205 (Office)</p><p> +91 9051433629 (Mohit Jaiswal)</p></td>
+      </tr>
+      </table>
     </div><!--end of footerTopRightInner-->
     <div class="footerTopRightInner">
-    <img src="images/mobile_bg.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-    <p> +91 9051433629</p>
-    </div><!--end of footerTopRightInner-->
-    <div class="footerTopRightInner">
-    <img src="images/email_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-    <p>mohitjaiswal20007@gmail.com</p>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10%"><img src="images/email_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" /></td>
+        <td width="75%"><p>prind2016@gmail.com (Office)</p><p>mohitjaiswal20007@gmail.com (Mohit Jaiswal)</p></td>
+      </tr>
+      </table>
     </div><!--end of footerTopRightInner-->
 </div><!--end of footerTopRight-->
 </div><!--end of footerTop-->
