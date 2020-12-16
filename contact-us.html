@@ -290,7 +290,77 @@ function fnsubmit(){
     			<tr>
                 <td width="53%" height="291" align="left" valign="top">
                  <div class="query_form_outer"> 
-                 			<form method="GET" onSubmit="return fnsubmit()">
+                  <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+                  action="https://script.google.com/macros/s/AKfycbzJs2alcp0R5qi3qrWJByi8oYrh1-a_4ZWgIOgDRFHOCwW15t4/exec">
+                    <!-- change the form action to your script url -->
+                
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="entry_form">
+                      <tr>
+                      <td colspan="3">
+                     <h3 style="font-size:20px; line-height:25px;">Contact Form :</h3>
+                      </td>
+                      </tr>
+                      <tr>
+                      <td colspan="3">
+                      Name : <span class="red">*</span>
+                      </td>
+                      </tr>
+                      <tr>
+                      <td colspan="3"><input name="name" type="text" id="name" size="30" required />
+                      </td>
+                      </tr>
+                      <tr>
+                      <td colspan="3">Company Name : <span class="red">*</span></td>
+                      </tr>
+                      <tr>
+                      <td colspan="3"><input name="compnay name" type="text" id="cname" size="30" required /></td>
+                      </tr>
+                      <tr>
+                      <td colspan="3">Company Address : <span class="red">*</span></td>
+                      </tr>
+                      <tr>
+                      <td colspan="3"><input name="company address" type="text" id="caddress" size="30" required/></td>
+                      </tr>
+                      <tr>
+                      <td colspan="3">E-mail address : <span class="red">*</span></td>
+                      </tr>
+                      <tr>
+                      <td colspan="3"><input name="email" type="text" id="email" size="30" required /></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Contact No. : <span class="red">*</span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"><input name="phone" type="text" id="phone" size="30" required /></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">Requirement :<span class="red"> *</span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="3"><textarea name="requirements" cols="22" rows="4" id="comments" required></textarea></td>
+                      </tr>
+                      <tr>
+                          <td colspan="3">Verify Yourself :<span class="red">*</span></td>
+                        </tr>
+                        <tr>
+                          <td colspan="3"><input type="text" id="txtcode"/></td>
+                        </tr>
+                        <tr>
+                          <td width="57%"><input type="text" name="randomfield" id="randomfield" disabled style="background:url(images/captcha_bg.jpg); color:#000; border:none; padding:5px; font:normal 18px/20px Tahoma, Geneva, sans-serif; width:80px; text-align:center; float:left;">
+                    <img src="images/reload.png" width="25" height="25" alt="Reload" title="Reload" onClick="getCaptcha();" style="cursor:pointer; padding:5px 0 0 10px; float:left;">
+                </td>
+                        <td width="43%"><input name="submit" type="submit" id="submit" value="Submit" class="button" /></td>
+                      </tr>
+                      </table>
+                
+                  </form>
+                  <!-- Customise the Thankyou Message People See when they submit the form: -->
+                  <div class="thankyou_message" style="display:none;">
+                    <h2><em>Thanks</em> for contacting us!
+                      We will get back to you soon!</h2>
+                  </div>
+              
+                 			<!-- <form method="GET" onSubmit="return fnsubmit()">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="entry_form">
                             <tr>
                             <td colspan="3">
@@ -349,7 +419,7 @@ function fnsubmit(){
                               <td width="43%"><input name="submit" type="submit" id="submit" value="Submit" class="button" /></td>
                             </tr>
                             </table>
-                            </form>
+                            </form> -->
              
                  </div><!--end of form--> 
                   
@@ -417,7 +487,7 @@ function fnsubmit(){
             <h1>Enquiry Form</h1>
             
             </div><!--arrow_box end-->
-            <form name="sms_form" method="GET" onSubmit="return fnsubmit()">
+            <form name="sms_form" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbzJs2alcp0R5qi3qrWJByi8oYrh1-a_4ZWgIOgDRFHOCwW15t4/exec">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
             <td id="myDiv">
@@ -426,7 +496,7 @@ function fnsubmit(){
             </tr>
             <tr>
             <td>
-            <input type="text" id="name" name="cname" value="Name" onfocus="javascript: if(this.value == 'Name'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Name';}" required />
+            <input type="text" id="name" name="compnay name" value="Name" onfocus="javascript: if(this.value == 'Name'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Name';}" required />
             </td>
             </tr>
             <tr>
@@ -436,12 +506,13 @@ function fnsubmit(){
             </tr>
             <tr>
             <td>
-            <input type="text" id="phone" name="mob" value="Phone" onfocus="javascript: if(this.value == 'Phone'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Phone';}" required />
+            <input type="text" id="phone" name="phone" value="Phone" onfocus="javascript: if(this.value == 'Phone'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Phone';}" required />
             </td>
             </tr>
             <tr>
             <td>
             <input type="text" id="subject" name="subject" value="Subject" onfocus="javascript: if(this.value == 'Subject'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Subject';}" required />
+            <input type="text" id="formname" name="formname" value="sms_form" style="display: none;" />
             </td>
             </tr>
             <tr>
@@ -452,12 +523,16 @@ function fnsubmit(){
             </tr>
             <tr>
             <td height="50" align="right">
-            <input type="submit" name="submit" value="Send" onClick="" />
+              <input name="submit" type="submit" id="submit" value="Submit" class="button" />
             </td>
             </tr>
             
             </table>
-			</form>
+      </form>
+      <div class="thankyou_message_sms" style="display:none;">
+        <h2><em>Thanks</em> for contacting us!
+          We will get back to you soon!</h2>
+      </div>
             </div><!--popup_content_right end-->
             <img src="images/enquiry.png" width="248" height="300" style="float:right; margin:30px 0 0 0;">
     </div><!--popup_content_main end-->
@@ -466,7 +541,9 @@ function fnsubmit(){
 	</div>
 </div>
 <!--popup end-->
-
+<!-- Submit the Form to Google Using "AJAX" -->
+<script data-cfasync="false" type="text/javascript"
+src="form-submission-handler.js"></script>
 
 
 

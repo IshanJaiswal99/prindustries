@@ -371,7 +371,7 @@ document.oncontextmenu=new Function("alert(message);return false")
             <h1>Enquiry Form</h1>
             
             </div><!--arrow_box end-->
-            <form name="sms_form" method="GET" onSubmit="return fnsubmit()">
+            <form name="sms_form" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbzJs2alcp0R5qi3qrWJByi8oYrh1-a_4ZWgIOgDRFHOCwW15t4/exec">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
             <td id="myDiv">
@@ -380,7 +380,7 @@ document.oncontextmenu=new Function("alert(message);return false")
             </tr>
             <tr>
             <td>
-            <input type="text" id="name" name="cname" value="Name" onfocus="javascript: if(this.value == 'Name'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Name';}" required />
+            <input type="text" id="name" name="compnay name" value="Name" onfocus="javascript: if(this.value == 'Name'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Name';}" required />
             </td>
             </tr>
             <tr>
@@ -390,12 +390,13 @@ document.oncontextmenu=new Function("alert(message);return false")
             </tr>
             <tr>
             <td>
-            <input type="text" id="phone" name="mob" value="Phone" onfocus="javascript: if(this.value == 'Phone'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Phone';}" required />
+            <input type="text" id="phone" name="phone" value="Phone" onfocus="javascript: if(this.value == 'Phone'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Phone';}" required />
             </td>
             </tr>
             <tr>
             <td>
             <input type="text" id="subject" name="subject" value="Subject" onfocus="javascript: if(this.value == 'Subject'){ this.value = ''; }" onblur="javascript: if(this.value==''){this.value='Subject';}" required />
+            <input type="text" id="formname" name="formname" value="sms_form" style="display: none;" />
             </td>
             </tr>
             <tr>
@@ -406,12 +407,16 @@ document.oncontextmenu=new Function("alert(message);return false")
             </tr>
             <tr>
             <td height="50" align="right">
-            <input type="submit" name="submit" value="Send" onClick="" />
+              <input name="submit" type="submit" id="submit" value="Submit" class="button" />
             </td>
             </tr>
             
             </table>
-			</form>
+      </form>
+      <div class="thankyou_message_sms" style="display:none;">
+        <h2><em>Thanks</em> for contacting us!
+          We will get back to you soon!</h2>
+      </div>
             </div><!--popup_content_right end-->
             <img src="images/enquiry.png" width="248" height="300" style="float:right; margin:30px 0 0 0;">
     </div><!--popup_content_main end-->
@@ -420,6 +425,9 @@ document.oncontextmenu=new Function("alert(message);return false")
 	</div>
 </div>
 <!--popup end-->
+<!-- Submit the Form to Google Using "AJAX" -->
+<script data-cfasync="false" type="text/javascript"
+src="form-submission-handler.js"></script>
 
 
 
