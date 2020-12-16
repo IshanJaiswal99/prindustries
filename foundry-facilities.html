@@ -25,27 +25,41 @@
 <link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="js/jquery.minone.js"></script>
+<script type="text/javascript" src="js/header-footer.js"></script>
 <script type="text/javascript">
+var checkExistFooter = setInterval(function() {
+   if ($('#footerjs').length) {
+    document.getElementById('footerjs').innerHTML = jsfooter;
+    clearInterval(checkExistFooter);
+   }
+}, 100);  
 ddsmoothmenu.init({
-mainmenuid: "smoothmenu1", //menu DIV id
-orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-classname: 'ddsmoothmenu', //class added to menu's outer DIV
-//customtheme: ["#1c5a80", "#18374a"],
-contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    mainmenuid: "smoothmenu1", //menu DIV id
+    orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+    classname: 'ddsmoothmenu', //class added to menu's outer DIV
+    //customtheme: ["#1c5a80", "#18374a"],
+    contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 })
 
 ddsmoothmenu.init({
-mainmenuid: "smoothmenu2", //Menu DIV id
-orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
-classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
-//customtheme: ["#804000", "#482400"],
-contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    mainmenuid: "smoothmenu2", //Menu DIV id
+    orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+    classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+    //customtheme: ["#804000", "#482400"],
+    contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 })
+var checkExistHeader = setInterval(function() {
+   if ($('.headerOuter').length) {
+       document.getElementsByClassName('headerTop')[0].innerHTML = jsheaderTop;
+        document.getElementsByClassName('ddsmoothmenu')[0].children[0].children[2].children[1].innerHTML = menujs;    
+        clearInterval(checkExistHeader);
+   }
+}, 100);  
 </script>
 <!--<link rel="stylesheet" type="text/css" href="menu/anylinkmenu.css" />
-<script type="text/javascript" src="menu/menucontents.js"></script>
-<script type="text/javascript" src="menu/anylinkmenu.js">
-</script>
+    <script type="text/javascript" src="menu/menucontents.js"></script>
+    <script type="text/javascript" src="menu/anylinkmenu.js">
+    </script>
 <script type="text/javascript">
 
 anylinkmenu.init("menuanchorclass")
@@ -148,17 +162,6 @@ document.oncontextmenu=new Function("alert(message);return false")
     <div class="companyName"><img src="images/logo_two.png" width="365" height="82" alt="" /></div>
     
     <div class="headerTop">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  	<tr>
-    <td width="15%"><img src="images/contact.png" width="32" height="39" alt="login_img" /></td>
-    <td width="55%">+91 8232027205</td>
-    <td width="30%" rowspan="2"><img src="images/iso.png" width="79" height="77" alt="" /></td>
-    </tr>
-    <tr>
-    <td width="15%"><img src="images/email.png" width="32" height="42" alt="login_img" /></td>
-    <td width="55%">prind2016@gmail.com</td>
-    </tr>
-	</table>
     </div><!--end of headerTop-->
 </div><!--end of header-->
 
@@ -168,13 +171,18 @@ document.oncontextmenu=new Function("alert(message);return false")
         <ul>
         <li><a href="index.html"><span class="homeIcon">Home</span></a></li>
         <li><a href="about-us.html"><span class="profileIcon">About Us</span></a></li>
-        <li><a href="#" class="current"><span class="productsIcon">Products</span></a>
+        <li><a href="#"><span class="productsIcon">Products</span></a>
         	<ul>
             <li><a href="pulleys-castings.html">Cast Iron Pulleys Castings</a></li>
             <li><a href="plummer-block-housing.html">Cast Iron Plummer Block Housing Castings</a></li>
             <li><a href="cast-iron-valves.html">Cast Iron Valve &amp; Valve Parts Castings</a></li>
             <li><a href="pump-casting.html">Cast Iron Pump Casting Components</a></li>
             <li><a href="gear-box-housing.html">Cast Iron Gear Box Housing Casting</a></li>
+            <li><a href="ornamental-casting.html">Ornamental Casting</a></li>
+            <li><a href="water-pipeline.html">Water Pipeline</a></li>
+            <li><a href="shutter-gate.html">Shutter Gate and Parts Casting</a></li>
+            <li><a href="electrical-hightension-line.html">Electrical High-Tension Line</a></li>
+            <li><a href="housing-casting.html">Housing Casting</a></li>
             <li><a href="cast-iron-weights.html">Cast Iron Weights</a></li>
             <li><a href="cast-iron-fly-wheels.html">Cast Iron Fly Wheels</a></li>
             <li><a href="cast-iron-handwheels.html">Cast Iron Handwheels</a></li>
@@ -183,24 +191,348 @@ document.oncontextmenu=new Function("alert(message);return false")
             <li><a href="cast-iron-linear-plates.html">Cast Iron Linear Plates</a></li>
             <li><a href="cast-iron-base-plates.html">Cast Iron Base Plates</a></li>
             <li><a href="cast-iron-industrial-castings.html">Cast Iron Industrial Castings</a></li>
-            <li><a href="electrical-hightension-line.html">Electrical Hightension Line</a></li>
-            <li><a href="housing-casting.html">Housing Castings</a></li>
             <li><a href="automotive-castings.html">Automotive Castings</a></li>
             <li><a href="railway-castings.html">Railway Castings as per RDSO</a></li>
-            <li><a href="rapid-prototype-development.html">Rapid Prototype Development &amp; Castings</a></li>
-            <li><a href="water-pipeline.html">Water Pipeline Products</a></li>
-            <li><a href="shutter-gate.html">Shutter Gate Castings</a></li>
-            <li><a href="other-castings.html">Other Casting Products</a></li>
+            <li><a href="other-castings.html">Other Castings</a></li>
             </ul>
         </li>
         <li><a href="desigen-development.html"><span class="developmentIcon">Design &amp; Development</span></a></li>
-        <li><a href="foundry-facilities.html"><span class="servicesIcon">Foundry Facilities</span></a></li>
+        <li><a href="foundry-facilities.html" class="current"><span class="servicesIcon">Foundry Facilities</span></a></li>
         <li><a href="quality.html"><span class="galleryIcon">Quality </span></a></li>
         <li><a href="contact-us.html" style="border:none;"><span class="contactIcon">Contact Us</span></a></li>
         </ul>
         </ul>
         
         </div>
+        </div>
+
+<!--<ul>
+<li><a href="index.html"><img src="images/home_button.png" width="40" height="42" alt="" /> <br />Home</a></li>
+<li><a href="#url"><img src="images/about_us_button.png" width="68" height="42" alt="" /> <br />About Us</a></li>
+<li><a href="#url" class="menuanchorclass" rel="anylinkmenu1">
+<img src="images/products_icon.png" width="63" height="42" alt="" /> <br />Products</a></li>
+<li><a href="#url"><img src="images/manufacturing_icon.png" width="150" height="42" alt="" /> <br />Manufacturing Facility</a></li>
+<li><a href="#url"><img src="images/gallery_icon.png" width="44" height="42" alt="" /> <br />Gallery</a></li>
+<li><a href="#url"><img src="images/contactus_icon.png" width="84" height="42" alt="" /> <br />Contact Us</a></li>
+</ul>-->
+
+
+</div>
+
+<div class="bannerInnerPage">
+<img src="images/all_banners/manufacturing_banner.jpg" width="1000" height="200" alt="" />
+</div><!--end of bannerInnerPage-->
+
+<div class="bodycon">
+
+  <div class="aboutUsBox">
+  <h4>Foundry Facilities</h4>
+   	<p style="font-size:14px; line-height:25px;">We provide a unique ability to respond rapidly to customer requirements and manufacture high quality components in wide range of 
+    grades in grey iron. We also have the ability to manufacture the most intricately shaped castings ranging from the size of a 1 kg piece up 
+    to 3000 Kg in weight as one offs or in large production batches. We can provide complete engineering, design and development service or 
+    alternatively, can simply use your existing patterns. When customers choose to work with us, they do so with an assurance of knowing they 
+    have selected a manufacturing partner that will support them long into the future. Our success has been built upon a unique ability to 
+    deliver an unmatched service &amp; assured quality by working with customers throughout every project.</p>
+
+  
+  </div><!--end of aboutUsBox-->
+  
+  <div class="aboutUsBox">
+  
+  
+    <div class="marquee" id="mycrawler2">
+    <img src="images/foundry_facility_scroll/1.jpg" /> 
+    <img src="images/foundry_facility_scroll/2.jpg" />
+    <img src="images/foundry_facility_scroll/3.jpg" />
+    <img src="images/foundry_facility_scroll/4.jpg" /> 
+    <img src="images/foundry_facility_scroll/5.jpg" />
+    <img src="images/foundry_facility_scroll/6.jpg" />
+    <img src="images/foundry_facility_scroll/7.jpg" />
+    <img src="images/foundry_facility_scroll/8.jpg" />
+    </div>
+
+<script type="text/javascript">
+marqueeInit({
+	uniqueid: 'mycrawler2',
+	style: {
+		'padding': '2px',
+		'width': '980px',
+		'height': '200px'
+	},
+	inc: 5, //speed - pixel increment for each iteration of this marquee's movement
+	mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
+	moveatleast: 2,
+	neutral: 150,
+	savedirection: true,
+	random: true
+});
+</script>
+  
+  </div><!--end of aboutUsBox-->
+  
+  <br class="clear" />
+
+    
+  <h1>Our Process-Flow Chart</h1>
+    
+  <img src="images/process_flow_chart.jpg" width="800" height="197" alt="" style="margin:0 auto; display:block;" />
+  <br class="clear" />
+  
+  <h1>Our Technical Capabilities</h1>
+  
+  <div class="middle_centent" style="width:980px; padding-bottom:30px; margin:10px 0; float:left;">
+  
+  	<div class="foundryFacility_outer">
+    	<div class="foundryFacility_outer_header"   style="height:80px;"><h3>Development</h3></div><!--end of foundryFacility_outer_header -->
+        <div class="foundryFacility_outer_header" style="background:#666;"><h3>Mold Type</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outer_header"><h3>Casting Grades</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outer_header" style="background:#666;"><h3>Max - Min Weight of Castings</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outer_header"><h3>Production Capacity</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outer_header" style="background:#666;"><h3>Certification</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outer_header"  style="height:100px;"><h3>Casting Solutions for</h3></div><!--end of foundryFacility_outer_headerOne -->
+    </div><!--end of foundryFacility_outer-->
+    
+    <div class="foundryFacility_outerRight">
+    	<div class="foundryFacility_outerRight_header" style="height:80px;"><h3>Specification/drawings/patterns. Facilitates for R&D : 3D CAD CAM, Modeling and Prototyping for Casting </h3></div><!--end of foundryFacility_outer_header -->
+        <div class="foundryFacility_outerRight_header" style="background:#666;"><h3>Green Sand / No Bake (Pit Molding / Match Plate)</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outerRight_header"><h3>FG I5O, FG 200, FG 220 & FG 260, IS 210, ASTM A48, DIN 1691</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outerRight_header" style="background:#666;"><h3>1 Kgs to 3000 Kgs in single piece</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outerRight_header"><h3>Installed : 5000 MT. PA , Used : 300 MT/ month</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outerRight_header" style="background:#666;"><h3>ISO 9001 : 2008, SSI, MSME.</h3></div><!--end of foundryFacility_outer_headerOne -->
+        <div class="foundryFacility_outerRight_header" style="height:100px;"><h3>General engineering , Pumps , Valves , Marine , Rail  
+        <br /> Oil , Automotive , Agriculture , Construction , Civil engineering</h3></div><!--end of foundryFacility_outer_headerOne -->
+    </div><!--end of foundryFacility_outerRight-->
+    
+  </div>
+  
+
+  
+  
+<div class="client">
+  
+	<div class="hotProducts">
+    	<div class="hotProductsHeading">
+        <img src="images/hot_products.png" width="122" height="41" alt="" />
+        </div><!--end of hotProductsHeading-->
+      <div class="outerdiv">
+
+		<div style="width:955px;" 
+        class="jCarouselLite1102_1-1-2 fl">
+        
+		<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; 
+        width: 2142px; left: -620.585px;" class="lsn m0px p0px hot">
+        
+        <li class="p7px">
+			<h3>Cast Iron Pulleys <br />Castings</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="pulleys-castings.html" title=""><img src="images/product_scroll/1.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="pulleys-castings.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Plummer Block Housing Castings</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="plummer-block-housing.html" title=""><img src="images/product_scroll/2.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="plummer-block-housing.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Valve &amp; Valve Parts Castings</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-valves.html" title=""><img src="images/product_scroll/3.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-valves.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Pump Casting Components</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="pump-casting.html" title=""><img src="images/product_scroll/4.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="pump-casting.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Gear Box Housing Casting</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="gear-box-housing.html" title=""><img src="images/product_scroll/5.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="gear-box-housing.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron <br />Weights</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-weights.html" title=""><img src="images/product_scroll/6.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-weights.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Fly <br />Wheels</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-fly-wheels.html" title=""><img src="images/product_scroll/7.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-fly-wheels.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron <br />Handwheels</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-handwheels.html" title=""><img src="images/product_scroll/8.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-handwheels.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Gears <br />Castings</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-gears-castings.html" title=""><img src="images/product_scroll/9.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-gears-castings.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron <br />Bollards</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-bollards.html" title=""><img src="images/product_scroll/10.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-bollards.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Linear <br />Plates</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-linear-plates.html" title=""><img src="images/product_scroll/11.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-linear-plates.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Base Plates / Pedestal / Frames</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-base-plates.html" title=""><img src="images/product_scroll/12.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-base-plates.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Cast Iron Industrial <br />Castings</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="cast-iron-industrial-castings.html" title=""><img src="images/product_scroll/13.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="cast-iron-industrial-castings.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Automotive <br />Castings</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="automotive-castings.html" title=""><img src="images/product_scroll/14.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="automotive-castings.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Railway Castings as per <br />RDSO</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="railway-castings.html" title=""><img src="images/product_scroll/15.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="railway-castings.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+        <li class="p7px">
+			<h3>Rapid Prototype <br />Development</h3>
+			<div class="lh0">
+			<div class="imgFrame ac vam m0a bdr" style="width:200px;height:150px;">
+            <a href="rapid-prototype-development.html" title=""><img src="images/product_scroll/16.jpg" alt="" 
+            title="" height="130" width="180" style="margin:0 auto; display:block;"></a>
+			</div>
+            </div>
+			<div class="p5px">
+				<a href="rapid-prototype-development.html" class="readMoreButtonTwo">Read More</a>
+			</div>
+		</li>
+        
+       
+</ul>
+</div>
 
 <script>jQuery(".jCarouselLite1102_1-1-2").jCarouselLite({btnNext: ".1102_1-1-2n",btnPrev: ".1102_1-1-2p",auto: 1000,speed: 1000,mouseWheel: true,scroll: 1,visible: 4,vertical: false,circular: true,pager:0,easing: "easeinout",hoverPause:true });</script>
 
@@ -212,41 +544,7 @@ document.oncontextmenu=new Function("alert(message);return false")
 </div><!--end of bodycon-->
 
 
-<div class="footerTop">
-	<div class="footerTopLeft">
-		<h2>P. R. Industries</h2>
-        <p>With a Manufacturing experience of around 30+ years, P. R. Industries has become a 
-        pioneer in the production and supplying of premium grade grey castings.</p>
-	</div><!--end of footerTopLeft-->
-    <div class="footerTopRight">
-    	<div class="footerTopRightInner">
-        <img src="images/contact_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-        <p>Mohit Jaiswal </p>
-        </div><!--end of footerTopRightInner-->
-        <div class="footerTopRightInner">
-        <img src="images/mobile_bg.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-        <p> +91 8232027205</p>
-        </div><!--end of footerTopRightInner-->
-        <div class="footerTopRightInner">
-        <img src="images/email_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-        <p>prind2016@gmail.com</p>
-        </div><!--end of footerTopRightInner-->
-    </div><!--end of footerTopRight-->
-</div><!--end of footerTop-->
-
-<div class="footerBottom">
-	<div class="footerBottomInner">
-    <!-- <div class="footerBottomInnerLeft"><p><a href="http://techonindia.com/"  target="_blank">Designed by "TechonIndia Infoservices"</a></p></div> -->
-    <div class="footerBottomInnerRight">
-    <p>
-    <a href="about-us.html">About</a> | 
-    <a href="desigen-development.html">Design &amp; Development</a> | 
-    <a href="foundry-facilities.html">Foundry Facilities</a> | 
-    <a href="quality.html">Quality</a> | 
-    <a href="contact-us.html">Contact Us</a>
-    </p></div>
-    </div><!--end of footerBottomInner-->
-</div><!--end of footerBottom-->
+<div id="footerjs"></div>
 
 
 

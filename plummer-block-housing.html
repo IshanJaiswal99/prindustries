@@ -24,7 +24,16 @@
 <link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="js/jquery.minone.js"></script>
+<script type="text/javascript" src="js/header-footer.js"></script>
 <script type="text/javascript">
+var checkExist = setInterval(function() {
+   if ($('#footerjs').length) {
+       let footer = document.getElementById('footerjs').innerHTML = jsfooter;
+    //    footer.replaceWith(jsfooter);
+    //    var htmlObject = $(footer);
+      clearInterval(checkExist);
+   }
+}, 100);  
 ddsmoothmenu.init({
 mainmenuid: "smoothmenu1", //menu DIV id
 orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
@@ -34,13 +43,28 @@ contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 })
 
 ddsmoothmenu.init({
-mainmenuid: "smoothmenu2", //Menu DIV id
-orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
-classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
-//customtheme: ["#804000", "#482400"],
-contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    mainmenuid: "smoothmenu2", //Menu DIV id
+    orientation: 'v', //Horizontal or vertical menu: Set to "h" or "v"
+    classname: 'ddsmoothmenu-v', //class added to menu's outer DIV
+    //customtheme: ["#804000", "#482400"],
+    contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 })
+var checkExistHeader = setInterval(function() {
+   if ($('.headerOuter').length) {
+       document.getElementsByClassName('headerTop')[0].innerHTML = jsheaderTop;
+        document.getElementsByClassName('ddsmoothmenu')[0].children[0].children[2].children[1].innerHTML = menujs;    
+        clearInterval(checkExistHeader);
+   }
+}, 100);  
 </script>
+<!--<link rel="stylesheet" type="text/css" href="menu/anylinkmenu.css" />
+<script type="text/javascript" src="menu/menucontents.js"></script>
+<script type="text/javascript" src="menu/anylinkmenu.js">
+</script>
+<script type="text/javascript">
+
+anylinkmenu.init("menuanchorclass")
+</script>-->
 <!--ddsmoothmenu-->
 
 <!--popup-->
@@ -150,12 +174,12 @@ document.oncontextmenu=new Function("alert(message);return false")
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
   	<tr>
     <td width="15%"><img src="images/contact.png" width="32" height="39" alt="login_img" /></td>
-    <td width="55%">+91 8232027205</td>
+    <td width="55%">+91 9051433629</td>
     <td width="30%" rowspan="2"><img src="images/iso.png" width="79" height="77" alt="" /></td>
     </tr>
     <tr>
     <td width="15%"><img src="images/email.png" width="32" height="42" alt="login_img" /></td>
-    <td width="55%">prind2016@gmail.com</td>
+    <td width="55%">mohitjaiswal20007@gmail.com</td>
     </tr>
 	</table>
     </div><!--end of headerTop-->
@@ -182,14 +206,9 @@ document.oncontextmenu=new Function("alert(message);return false")
             <li><a href="cast-iron-linear-plates.html">Cast Iron Linear Plates</a></li>
             <li><a href="cast-iron-base-plates.html">Cast Iron Base Plates</a></li>
             <li><a href="cast-iron-industrial-castings.html">Cast Iron Industrial Castings</a></li>
-            <li><a href="electrical-hightension-line.html">Electrical Hightension Line</a></li>
-            <li><a href="housing-casting.html">Housing Castings</a></li>
             <li><a href="automotive-castings.html">Automotive Castings</a></li>
             <li><a href="railway-castings.html">Railway Castings as per RDSO</a></li>
             <li><a href="rapid-prototype-development.html">Rapid Prototype Development &amp; Castings</a></li>
-            <li><a href="water-pipeline.html">Water Pipeline Products</a></li>
-            <li><a href="shutter-gate.html">Shutter Gate Castings</a></li>
-            <li><a href="other-castings.html">Other Casting Products</a></li>
             </ul>
         </li>
         <li><a href="desigen-development.html"><span class="developmentIcon">Design &amp; Development</span></a></li>
@@ -364,41 +383,7 @@ document.oncontextmenu=new Function("alert(message);return false")
 </div><!--end of bodycon-->
 
 
-<div class="footerTop">
-	<div class="footerTopLeft">
-		<h2>P. R. Industries</h2>
-        <p>With a Manufacturing experience of around 30+ years, P. R. Industries has become a 
-        pioneer in the production and supplying of premium grade grey castings.</p>
-	</div><!--end of footerTopLeft-->
-    <div class="footerTopRight">
-    	<div class="footerTopRightInner">
-        <img src="images/contact_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-        <p>Mohit Jaiswal </p>
-        </div><!--end of footerTopRightInner-->
-        <div class="footerTopRightInner">
-        <img src="images/mobile_bg.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-        <p> +91 8232027205</p>
-        </div><!--end of footerTopRightInner-->
-        <div class="footerTopRightInner">
-        <img src="images/email_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" />
-        <p>prind2016@gmail.com</p>
-        </div><!--end of footerTopRightInner-->
-    </div><!--end of footerTopRight-->
-</div><!--end of footerTop-->
-
-<div class="footerBottom">
-	<div class="footerBottomInner">
-    <!-- <div class="footerBottomInnerLeft"><p><a href="http://techonindia.com/"  target="_blank">Designed by "TechonIndia Infoservices"</a></p></div> -->
-    <div class="footerBottomInnerRight">
-    <p>
-    <a href="about-us.html">About</a> | 
-    <a href="desigen-development.html">Design &amp; Development</a> | 
-    <a href="foundry-facilities.html">Foundry Facilities</a> | 
-    <a href="quality.html">Quality</a> | 
-    <a href="contact-us.html">Contact Us</a>
-    </p></div>
-    </div><!--end of footerBottomInner-->
-</div><!--end of footerBottom-->
+<div id="footerjs"></div>
 
 
 
