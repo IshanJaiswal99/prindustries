@@ -2,12 +2,12 @@ const jsheaderTop =  `
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   	<tr>
     <td width="15%"><img src="images/contact.png" width="32" height="39" alt="login_img" /></td>
-    <td width="55%"><p>+91 8232027205 (Office)</p><p>+91 9051433629 (Mohit)</p></td>
+    <td width="55%"><p>+91 9051433629 (Mohit)</p><p>+91 8232027205 (Office)</p></td>
     <td width="30%" rowspan="2"><img src="images/iso.png" width="79" height="77" alt="" /></td>
     </tr>
     <tr>
     <td width="15%"><img src="images/email.png" width="32" height="42" alt="login_img" /></td>
-    <td width="55%"><p>prind2016@gmail.com (Office)</p><p>mohitjaiswal20007@gmail.com</p></td>
+    <td width="55%"><p>mohitjaiswal20007@gmail.com</p><p>prind2016@gmail.com (Office)</p></td>
     </tr>
     </table>`;
 
@@ -22,6 +22,8 @@ const menujs = `
             <li><a href="shutter-gate.html">Shutter Gate and Parts Casting</a></li>
             <li><a href="electrical-hightension-line.html">Electrical High-Tension Line</a></li>
             <li><a href="housing-casting.html">Housing Casting</a></li>
+            <li><a href="cast-iron-industrial-castings.html">Cast Iron Industrial Castings</a></li>
+            <li><a href="other-castings.html">Other Castings</a></li>
             <li><a href="cast-iron-weights.html">Cast Iron Weights</a></li>
             <li><a href="cast-iron-fly-wheels.html">Cast Iron Fly Wheels</a></li>
             <li><a href="cast-iron-handwheels.html">Cast Iron Handwheels</a></li>
@@ -29,10 +31,8 @@ const menujs = `
             <li><a href="cast-iron-bollards.html">Cast Iron Bollards</a></li>
             <li><a href="cast-iron-linear-plates.html">Cast Iron Linear Plates</a></li>
             <li><a href="cast-iron-base-plates.html">Cast Iron Base Plates</a></li>
-            <li><a href="cast-iron-industrial-castings.html">Cast Iron Industrial Castings</a></li>
             <li><a href="automotive-castings.html">Automotive Castings</a></li>
             <li><a href="railway-castings.html">Railway Castings as per RDSO</a></li>
-            <li><a href="other-castings.html">Other Castings</a></li>
             `;
 
             // <div class="footerTopRightInner">
@@ -50,7 +50,7 @@ const jsfooter = `<div class="footerTop">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="10%"><img src="images/mobile_bg.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" /></td>
-        <td width="75%"><p> +91 8232027205 (Office)</p><p> +91 9051433629 (Mohit Jaiswal)</p></td>
+        <td width="75%"><p> +91 9051433629 (Mohit Jaiswal)</p><p> +91 8232027205 (Office)</p></td>
       </tr>
       </table>
     </div><!--end of footerTopRightInner-->
@@ -58,7 +58,7 @@ const jsfooter = `<div class="footerTop">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="10%"><img src="images/email_icon.jpg" width="20" height="21" alt="" style="float:left; margin:0 10px 0 0;" /></td>
-        <td width="75%"><p>prind2016@gmail.com (Office)</p><p>mohitjaiswal20007@gmail.com (Mohit Jaiswal)</p></td>
+        <td width="75%"><p>mohitjaiswal20007@gmail.com (Mohit Jaiswal)</p><p>prind2016@gmail.com (Office)</p></td>
       </tr>
       </table>
     </div><!--end of footerTopRightInner-->
